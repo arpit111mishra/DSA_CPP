@@ -70,8 +70,7 @@ void Array::insert(int index,int data)
               }
               ptr[index]=data;
               lastIndex++;
-              
-       }
+}
        catch(int e)
        {
            if(e==1)
