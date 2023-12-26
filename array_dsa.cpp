@@ -19,6 +19,10 @@ void edit(int,int);
 int count();
 int getCapacity();
 void display();
+Array(Array&);
+Array& operator=(Array&);
+Array();
+~Array();
 };
 Array::Array()
 {
@@ -139,7 +143,8 @@ int Array::getCapacity()
        return capacity;
 }
 void Array::display()
-{    try{
+{           
+       try{
        if(isEmpty())
        throw 1;
        for(int i=0;i<=lastIndex;i++)
@@ -149,6 +154,32 @@ void Array::display()
 }
 catch(int e)
 {
+       if(e==1)
        cout<<" Array is empty ";
 }
+}
+Array::~Array()
+{
+       delete []ptr;
+}
+Array::Array(Array& arr)
+{
+   capacity=arr.capacity;
+   lastIndex=arr.lastIndex;
+   ptr =new int[capacity];
+   for(int i=0;i<=lastIndex;i++)
+     ptr[i]=arr.ptr[i];
+}
+Array& Array::operator=(Array& arr)
+{
+ capacity=arr.capacity;
+   lastIndex=arr.lastIndex;
+    if(ptr!=NULL)
+    {
+       delete []ptr;
+    }
+   ptr =new int[capacity];
+   for(int i=0;i<=lastIndex;i++)
+     ptr[i]=arr.ptr[i];
+     return (*this);
 }
