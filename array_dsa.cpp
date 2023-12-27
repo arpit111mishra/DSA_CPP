@@ -141,6 +141,7 @@ int Array::getCapacity()
 {
        return capacity;
 }
+
 void Array::display()
 {           
        try{
