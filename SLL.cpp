@@ -16,12 +16,12 @@ class SLL
     void insertAtLast(int);
     void insertAfter(node *,int);
     node* search(int);
-    void deleteFirst();
-    void deleteLast();
-    void deletenode(node *);
+    void deleteFirst();           //***
+    void deleteLast();            //***
+    void deletenode(node *);      //***
     SLL();
-    ~SLL();
-    SLL(SLL&);//copy constructor
+    ~SLL();                      //***
+    SLL(SLL&);//copy constructor        
     SLL& operator=(SLL&);
 };
 SLL::SLL()
