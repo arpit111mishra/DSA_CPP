@@ -154,7 +154,7 @@ CLL::CLL(CLL& C)
     insertAtLast(last->item);
     }  
 }
-CLL& CLL::oprator=(CLL& C)
+CLL& CLL::operator=(CLL& C)
 {
     while(last)
       deleteFirst();

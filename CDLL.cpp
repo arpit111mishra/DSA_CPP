@@ -100,7 +100,7 @@ void CDLL::deleteFirst()
         if(start->next==start)
         {
             delete start;
-            start=NULL:
+            start=NULL;
         }
         else
         {
@@ -184,7 +184,7 @@ CDLL& CDLL::operator=(CDLL& d)
         {
             insertAtLast(t->item);
             t=t->next;
-        } while (t!=d.start);
+        } while(t!=d.start);
         }
         return *this;   
 }
